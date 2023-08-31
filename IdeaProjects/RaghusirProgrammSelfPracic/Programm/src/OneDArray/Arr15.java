@@ -1,0 +1,51 @@
+package OneDArray;
+
+import java.util.Arrays;
+
+public class Arr15 {
+    public static void main(String[] args) {
+        ArrayOperation ao=new ArrayOperation();
+        System.out.println("Enter first Array");
+        int[] x=ao.readArray();
+        System.out.println("Enter second Array");
+        int[] y=ao.readArray();
+        System.out.println("user entered element is");
+        ao.dispArray(x);
+        ao.dispArray(y);
+        int[] z=margeSortedArray(x,y);
+        System.out.println("sorted marge array is ");
+        System.out.println(Arrays.toString(z));
+    }
+    static int[] margeSortedArray(int[] a, int[] b)
+    {
+        int[] c=new int[a.length+b.length];
+        int i=0,j=0,k=0;
+        while (i<a.length && j<b.length)
+        {
+            if(a[i]<b[j])
+            {
+                c[k] = a[i];
+                i++;
+            }
+            else
+            {
+                c[k]=b[j];
+                j++;
+            }
+            k++;
+        }
+        while (i<a.length)
+        {
+            c[k]=a[i];
+            i++;
+            k++;
+        }
+        while (j<b.length)
+        {
+            c[k]=b[j];
+            j++;
+            k++;
+        }
+        return c;
+    }
+}

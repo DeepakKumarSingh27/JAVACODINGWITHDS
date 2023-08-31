@@ -1,0 +1,19 @@
+package NumberSystem;
+
+import java.util.Scanner;
+
+public class Pro22 {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Three Number:");
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int c=sc.nextInt();
+        int big=a>b&&a>c?a:b>c?b:c;
+        System.out.println("Biggest Number is: "+big);
+        int small=a<b&&a<c?a:b<c?b:c; //a<b&&a<c?a:b<c?b:c;
+        System.out.println("smallest Number is: "+small);
+        int middle=a+b+c-(big+small);
+        System.out.println("Middle Number is: "+middle); //ex->10,20,30
+    }
+}
