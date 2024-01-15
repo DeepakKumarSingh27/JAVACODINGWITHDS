@@ -10,7 +10,7 @@ public class Pro1 {
         System.out.println("Subtraction is "+(a-b));
         System.out.println("multiplication is "+(a*b));
         System.out.println("Division is "+(a/b));
-        System.out.println("modulo is "+(a%b));
+        System.out.println("modulo is "+(a%b))
 
     }
 }
